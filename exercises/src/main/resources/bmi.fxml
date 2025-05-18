@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BMI.BMIController">
+   <children>
+      <ImageView fitHeight="612.0" fitWidth="919.0" layoutX="-105.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@kalkulator%20BMI%20z%20okienkami(600%20x%20400%20px)%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="38.0" layoutY="157.0" text="masa w kg" textFill="#dfea10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="masaField" layoutX="38.0" layoutY="131.0" />
+      <TextField fx:id="wzrostField" layoutX="38.0" layoutY="189.0" />
+      <Label layoutX="38.0" layoutY="215.0" prefHeight="18.0" prefWidth="118.0" text="wzrost w cm" textFill="#f7e51d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="obliczButton" layoutX="188.0" layoutY="282.0" mnemonicParsing="false" onAction="#obliczBMI" text="oblicz BMI">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="71.0" layoutY="399.0" prefHeight="22.0" prefWidth="150.0" text="Twój wskaźnik BMI:" textFill="#d7ec18">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="wynikBMI" layoutX="265.0" layoutY="395.0" text="twoje BMI">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="ocenaBMI" layoutX="96.0" layoutY="497.0" text="...">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
