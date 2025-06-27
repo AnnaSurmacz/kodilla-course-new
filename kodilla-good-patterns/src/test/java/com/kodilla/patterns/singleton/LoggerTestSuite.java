@@ -8,32 +8,22 @@ class LoggerTestSuite {
 
     private static Logger logger;
 
-    @BeforeEach
-    void resetLogger() {
-        logger = Logger.LOG;
-        logger.log(""); // resetuje stan singletona przed każdym testem
-    }
-
     @Test
-    void testGetLastLogAfterOneLog() {
+    void testLogger() {
         // Given
+        Logger.LOG.log("A");
+        Logger.LOG.log("B");
+        Logger.LOG.log("C");
+
         // When
-        logger.log("Pierwszy log");
+        Logger.LOG.log("E");
+        Logger.LOG.log("F");
 
         // Then
-        assertEquals("Pierwszy log", logger.getLastLog());
+        assertEquals("F", Logger.LOG.getLastLog());
+        Logger.LOG.log("G");
+        assertEquals("G", Logger.LOG.getLastLog());
     }
-
-    @Test
-    void testGetLastLogAfterMoreLogs() {
-        // Given
-        // When
-        logger.log("Pierwszy log");
-        logger.log("Drugi log");
-
-        // Then
-        assertEquals("Drugi log", logger.getLastLog());
-    }
-
 }
+
 
