@@ -21,6 +21,7 @@ class LibraryTestSuite {
         Library shallowClonedLibrary = library.shallowCopy();
         shallowClonedLibrary.setName("City Library - shallow copy");
 
+
         Library deepClonedLibrary = library.deepCopy();
         deepClonedLibrary.setName("City Library - deep copy");
 
@@ -31,6 +32,10 @@ class LibraryTestSuite {
 
         assertEquals(3, library.getBooks().size());
         assertEquals(3, shallowClonedLibrary.getBooks().size());
+        assertEquals(3, deepClonedLibrary.getBooks().size());
+        Book book4 = new Book("Pan Tadeusz", "Adam Mickiewicz", LocalDate.of(1993, 1, 28));
+        library.getBooks().add(book4);
+        assertEquals(4, shallowClonedLibrary.getBooks().size());
         assertEquals(3, deepClonedLibrary.getBooks().size());
 
     }
