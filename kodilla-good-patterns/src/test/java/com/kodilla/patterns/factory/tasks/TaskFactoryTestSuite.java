@@ -50,8 +50,6 @@ public class TaskFactoryTestSuite {
         assertTrue(shoppingTask.isTaskExecuted());
 
     }
-
-
 }
 
 
