@@ -1,9 +1,10 @@
-package com.kodilla.hibernate.tasklist.dao;
+package com.kodilla.hibernate.task.dao;
 
-import com.kodilla.hibernate.tasklist.TaskList;
+import com.kodilla.hibernate.task.TaskList;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import com.kodilla.hibernate.task.dao.TaskListDao;
 
 import java.util.List;
 
