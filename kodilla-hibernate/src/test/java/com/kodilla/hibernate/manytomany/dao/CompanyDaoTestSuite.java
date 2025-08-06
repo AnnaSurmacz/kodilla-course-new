@@ -89,6 +89,12 @@ class CompanyDaoTestSuite {
             // Then
             assertEquals(2, result.size());
 
+            Company firstCompany = result.get(0);
+            Company secondCompany = result.get(1);
+
+            assertTrue(firstCompany.getName().equals("SoftVision") || firstCompany.getName().equals("SoftwareHouse"));
+            assertTrue(secondCompany.getName().equals("SoftVision") || secondCompany.getName().equals("SoftwareHouse"));
+            assertNotEquals(firstCompany.getName(), secondCompany.getName());
         }
 
     @Test
@@ -108,6 +114,14 @@ class CompanyDaoTestSuite {
         // Then
         assertEquals(2, result.size());
 
-    }
+        Employee firstEmployee = result.get(0);
+        Employee secondEmployee = result.get(1);
 
+
+        assertTrue((firstEmployee.getFirstname().equals("Anna") && firstEmployee.getLastname().equals("Nowak")) ||
+                        (firstEmployee.getFirstname().equals("Ewa") && firstEmployee.getLastname().equals("Nowak")));
+
+        assertTrue((secondEmployee.getFirstname().equals("Anna") && secondEmployee.getLastname().equals("Nowak")) ||
+                        (secondEmployee.getFirstname().equals("Ewa") && secondEmployee.getLastname().equals("Nowak")));
+    }
     }
